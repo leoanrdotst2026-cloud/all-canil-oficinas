@@ -1,1 +1,11 @@
-<!DOCTYPE html><html><head><title>All Canil Oficinas</title></head><body><h1>Carregando site completo...</h1><p>Deploy em andamento.</p></body></html>
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>All Canil Oficinas</title></head>
+<body>
+<script>
+(async()=>{
+  const parts = await Promise.all([0,1,2].map(i=>fetch('parts/'+i+'.txt').then(r=>r.text())));
+  document.open(); document.write(parts.join('')); document.close();
+})();
+</script>
+<p style="font-family:sans-serif;padding:2rem;color:#0018A8">Carregando All Canil Oficinas…</p>
+</body></html>
